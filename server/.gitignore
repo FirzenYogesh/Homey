@@ -132,3 +132,5 @@ dist
 
 # Databases
 *.db
+*.sqlite
+*.sqlite3
