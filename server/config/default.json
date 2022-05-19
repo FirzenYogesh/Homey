@@ -1,0 +1,17 @@
+{
+	"database": {
+		"driver": "sqlite",
+		"path": "homey.db",
+		"port": "",
+		"host": "",
+		"data": "",
+		"user": "",
+		"password": "",
+		"url": ""
+	},
+	"admin": {
+		"username": "admin",
+		"password": "changeme"
+	},
+	"appName": "Homey"
+}

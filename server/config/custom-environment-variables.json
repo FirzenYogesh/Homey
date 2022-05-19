@@ -1,0 +1,17 @@
+{
+	"database": {
+		"driver": "DATABASE_DRIVER",
+		"path": "DATABASE_PATH",
+		"port": "DATABASE_PORT",
+		"host": "DATABASE_HOST",
+		"name": "DATABASE_NAME",
+		"user": "DATABASE_USERNAME",
+		"password": "DATABASE_PASSWORD",
+		"url": "DATABASE_URL"
+	},
+	"admin": {
+		"username": "ADMIN_USERNAME",
+		"password": "ADMIN_PASSWORD"
+	},
+	"appName": "APP_NAME"
+}

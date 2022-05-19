@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mysql"
+    url      = env("DATABASE_URL")
+}
+
+enum OpenTarget {
+    new_tab
+    same_page
+    modal
+    copy
+}
+
+model Link {
+    id          Int        @id @default(autoincrement())
+    title       String
+    description String?
+    userId      Int
+    sectionId   Int
+    isPublic    Boolean    @default(false)
+    icon        String?
+    url         Json
+    openTarget  OpenTarget @default(new_tab)
+    healthCheck Json
+}
