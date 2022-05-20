@@ -7,12 +7,12 @@ export interface PasswordHash {
 
 export function generateHashAndSalt(password: string): PasswordHash {
 	// Creating a unique salt for a particular user
-	const salt = crypto.randomBytes(16).toString("hex");
+	const salt = crypto.randomBytes(256).toString("hex");
 
 	// Hashing user's salt and password with 1000 iterations,
 
 	const hash = crypto
-		.pbkdf2Sync(password, salt, 1000, 64, `sha512`)
+		.pbkdf2Sync(password, salt, 1000, 256, `sha512`)
 		.toString(`hex`);
 
 	return {
@@ -26,7 +26,7 @@ export function validatePassword(
 	passwordHash: PasswordHash
 ): boolean {
 	const validateHash = crypto
-		.pbkdf2Sync(password, passwordHash.salt, 1000, 64, `sha512`)
+		.pbkdf2Sync(password, passwordHash.salt, 1000, 256, `sha512`)
 		.toString(`hex`);
 	return passwordHash.hash === validateHash;
 }

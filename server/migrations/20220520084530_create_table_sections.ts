@@ -18,7 +18,7 @@ export async function up(knex: Knex): Promise<void> {
 		})
 		.then(() => {
 			return knex("sections").insert([
-				{ name: "/default", title: "", pageId: 1 },
+				{ name: "/", title: "", pageId: 1 },
 			]);
 		});
 }

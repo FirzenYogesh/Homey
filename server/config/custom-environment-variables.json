@@ -15,6 +15,7 @@
 	},
 	"app": {
 		"name": "APP_NAME",
-		"port": "APP_PORT"
+		"port": "APP_PORT",
+		"tokenSecret": "APP_TOKEN_SECRET"
 	}
 }

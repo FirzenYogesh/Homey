@@ -15,6 +15,7 @@
 	},
 	"app": {
 		"name": "Homey",
-		"port": 7050
+		"port": 7050,
+		"tokenSecret": "xxx"
 	}
 }

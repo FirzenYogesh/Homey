@@ -10,7 +10,7 @@
 	"scripts": {
 		"test": "export NODE_ENV=test && find tests -name '*.spec.ts' | xargs mocha -r ts-node/register -r tests/hooks.ts",
 		"postinstall": "knex migrate:latest",
-		"test:clean": "rm -f dev.sqlite3 && npm run postinstall && npm test"
+		"test:dev": "rm -f dev.sqlite3 && npm run postinstall && npm test"
 	},
 	"author": "FirzenYogesh",
 	"license": "ISC",
@@ -19,6 +19,7 @@
 		"@types/chai": "^4.3.1",
 		"@types/config": "^0.0.41",
 		"@types/express": "^4.17.13",
+		"@types/jsonwebtoken": "^8.5.8",
 		"@types/lodash": "^4.14.182",
 		"@types/mocha": "^9.1.1",
 		"@types/node": "^17.0.34",
@@ -34,6 +35,7 @@
 		"config": "^3.3.7",
 		"dotenv": "^16.0.1",
 		"express": "^4.18.1",
+		"jsonwebtoken": "^8.5.1",
 		"knex": "^2.0.0",
 		"lodash": "^4.17.21",
 		"mysql": "^2.18.1",

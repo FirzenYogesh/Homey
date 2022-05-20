@@ -13,7 +13,7 @@ describe("sections table test", () => {
 			.findSectionById(1)
 			.then((result) => {
 				expect(result).not.to.be.null;
-				expect(result.name).to.equal("/default");
+				expect(result.name).to.equal("/");
 				done();
 			})
 			.catch((err: Error) => {
