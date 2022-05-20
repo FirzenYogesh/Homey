@@ -10,6 +10,9 @@ const config: { [key: string]: Knex.Config } = {
 		},
 		migrations: {
 			extension: "ts",
+			tableName: "knex_migrations",
+			directory: "migrations",
+			stub: "migrations/ts.stub",
 		},
 	},
 
@@ -26,6 +29,9 @@ const config: { [key: string]: Knex.Config } = {
 		},
 		migrations: {
 			tableName: "knex_migrations",
+			extension: "ts",
+			directory: "migrations",
+			stub: "migrations/ts.stub",
 		},
 	},
 
@@ -42,8 +48,25 @@ const config: { [key: string]: Knex.Config } = {
 		},
 		migrations: {
 			tableName: "knex_migrations",
+			extension: "ts",
+			directory: "migrations",
+			stub: "migrations/ts.stub",
 		},
 	},
 };
 
 module.exports = config;
+
+// createTable("links", (table) => {
+// 	table.increments();
+// 	table.string("title").notNullable();
+// 	table.string("description");
+// 	table.integer("userId").notNullable();
+// 	table.integer("sectionId").notNullable();
+// 	table.boolean("isPublic").defaultTo(false);
+// 	table.string("icon");
+// 	table.json("url");
+// 	table.string("openTarget");
+// 	table.json("healthCheck");
+// 	table.timestamps(true, true, true);
+// });
