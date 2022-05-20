@@ -10,7 +10,7 @@ export async function up(knex: Knex): Promise<void> {
 			table.string("name").notNullable().unique();
 			table.string("title").notNullable();
 			table.string("description");
-			table.integer("pageId");
+			table.integer("pageId").notNullable();
 			table.string("icon");
 			table.timestamps(true, true, true);
 		});

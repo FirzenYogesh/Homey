@@ -8,6 +8,7 @@ export async function up(knex: Knex): Promise<void> {
 		.withSchema(process.env.DATABASE_NAME)
 		.createTable("users", (table) => {
 			table.increments();
+			table.foreign("id").references("userId").inTable("links");
 			table.string("name").notNullable().unique();
 			table.string("hash").notNullable();
 			table.string("salt").notNullable();
