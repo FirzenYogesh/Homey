@@ -1,16 +1,8 @@
-// let databaseDriver;
-// console.info("Selected database driver", driver);
-// if (driver === "sqlite") {
-// 	databaseDriver = require("./sqlite");
-// }
-
-// export default databaseDriver;
-
 import knex, { Knex } from "knex";
 import config from "config";
 import _ from "lodash";
 
-export let database = knex({
+export let database: Knex<any, unknown[]> = knex({
 	client: getClient(),
 	connection: connectionBuilder(),
 });

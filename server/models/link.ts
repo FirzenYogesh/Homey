@@ -20,3 +20,4 @@ export default interface Link {
 		status: number;
 	};
 }
+

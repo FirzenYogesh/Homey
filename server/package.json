@@ -8,8 +8,9 @@
 		"url": "git+https://github.com/FirzenYogesh/Homey.git"
 	},
 	"scripts": {
-		"test": "export NODE_ENV=test && find tests -name '*.spec.ts' | xargs mocha --recursive -r ts-node/register",
-		"postinstall": "knex migrate:latest"
+		"test": "export NODE_ENV=test && find tests -name '*.spec.ts' | xargs mocha -r ts-node/register -r tests/hooks.ts",
+		"postinstall": "knex migrate:latest",
+		"test:clean": "rm -f dev.sqlite3 && npm run postinstall && npm test"
 	},
 	"author": "FirzenYogesh",
 	"license": "ISC",
@@ -25,12 +26,10 @@
 		"chai": "^4.3.6",
 		"mocha": "^10.0.0",
 		"nodemon": "^2.0.16",
-		"prisma": "^3.14.0",
 		"ts-node": "^10.7.0",
 		"typescript": "^4.6.4"
 	},
 	"dependencies": {
-		"@prisma/client": "^3.14.0",
 		"async": "^3.2.3",
 		"config": "^3.3.7",
 		"dotenv": "^16.0.1",
