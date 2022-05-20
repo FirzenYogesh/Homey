@@ -4,7 +4,7 @@
 		"path": "homey.db",
 		"port": "",
 		"host": "",
-		"data": "",
+		"name": "",
 		"user": "",
 		"password": "",
 		"url": ""
@@ -13,5 +13,8 @@
 		"username": "admin",
 		"password": "changeme"
 	},
-	"appName": "Homey"
+	"app": {
+		"name": "Homey",
+		"port": 7050
+	}
 }

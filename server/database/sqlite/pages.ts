@@ -4,7 +4,7 @@ import async from "async";
 import config from "config";
 import _ from "lodash";
 
-const APP_NAME = config.get("appName");
+const APP_NAME = config.get("app.name");
 export const TABLE_NAME = "pages";
 
 export default class PagesTable {

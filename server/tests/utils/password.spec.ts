@@ -11,10 +11,10 @@ describe("Password Utility Test", () => {
 	let passwordHash: PasswordHash;
 	it("password should be hashed", () => {
 		passwordHash = generateHashAndSalt(testPassword);
-		expect(passwordHash).to.not.be.null;
-		expect(passwordHash.hash).to.not.be.null;
+		expect(passwordHash).not.to.be.null;
+		expect(passwordHash.hash).not.to.be.null;
 		expect(passwordHash.hash).to.be.string;
-		expect(passwordHash.salt).to.not.be.null;
+		expect(passwordHash.salt).not.to.be.null;
 		expect(passwordHash.salt).to.be.string;
 	});
 

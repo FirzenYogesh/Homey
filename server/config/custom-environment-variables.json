@@ -13,5 +13,8 @@
 		"username": "ADMIN_USERNAME",
 		"password": "ADMIN_PASSWORD"
 	},
-	"appName": "APP_NAME"
+	"app": {
+		"name": "APP_NAME",
+		"port": "APP_PORT"
+	}
 }

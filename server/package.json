@@ -9,7 +9,7 @@
 	},
 	"scripts": {
 		"test": "export NODE_ENV=test && find tests -name '*.spec.ts' | xargs mocha --recursive -r ts-node/register",
-		"postinstall": "prisma migrate deploy"
+		"postinstall": "knex migrate:latest"
 	},
 	"author": "FirzenYogesh",
 	"license": "ISC",

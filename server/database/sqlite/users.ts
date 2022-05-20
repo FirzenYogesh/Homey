@@ -5,7 +5,7 @@ import config from "config";
 import _ from "lodash";
 import { generateHashAndSalt } from "../../utils/password";
 
-const APP_NAME = config.get("appName");
+const APP_NAME = config.get("app.name");
 export const TABLE_NAME = "users";
 
 export default class UsersTable {

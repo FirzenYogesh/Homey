@@ -1,11 +1,12 @@
-import express from "express";
 import dotEnv from "dotEnv";
-
 dotEnv.config();
+
+import express from "express";
+import config from "config";
 
 const app = express();
 
-const port = process.env.PORT || 7050;
+const port = config.get("");
 import database from "./database";
 import async from "async";
 

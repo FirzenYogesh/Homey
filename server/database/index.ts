@@ -10,7 +10,7 @@ import knex, { Knex } from "knex";
 import config from "config";
 import _ from "lodash";
 
-let database = knex({
+export let database = knex({
 	client: getClient(),
 	connection: connectionBuilder(),
 });
@@ -48,5 +48,3 @@ function connectionBuilder():
 		filename: config.get("database.path"),
 	};
 }
-
-database.migrate.latest();

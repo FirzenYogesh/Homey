@@ -1,10 +1,11 @@
 import dotEnv from "dotEnv";
 dotEnv.config();
 import { Knex } from "knex";
+import config from "config";
 
 export async function up(knex: Knex): Promise<void> {
 	return knex.schema
-		.withSchema(process.env.DATABASE_NAME)
+		.withSchema(config.get("database.name"))
 		.createTable("links", (table) => {
 			table.increments();
 			table.string("title").notNullable();
@@ -21,5 +22,7 @@ export async function up(knex: Knex): Promise<void> {
 }
 
 export async function down(knex: Knex): Promise<void> {
-	return knex.schema.withSchema(process.env.DATABASE_NAME).dropTable("links");
+	return knex.schema
+		.withSchema(config.get("database.name"))
+		.dropTable("links");
 }
